@@ -72,7 +72,7 @@ export default {
 
           <!-- Sign up -->
           <button type="button" class="btn btn-outline-info">
-            <router-link class="nav-link" to="/login">Registrarse</router-link></button>
+            <router-link class="nav-link" to="/registro">Registrarse</router-link></button>
           <button type="button" class="btn btn-outline-danger">Iniciar sesion</button>
         </div>
       </div>

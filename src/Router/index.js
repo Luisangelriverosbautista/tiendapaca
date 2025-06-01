@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 
 
-import login from "/src/components/Pages/login.vue";
+import registro from "/src/components/Pages/registrarseV.vue";
 // import Registro from "../page/registro.vue";
 import Principal from "/src/components/Pages/Principal.vue";
 
@@ -14,38 +14,11 @@ const routes = [
 
     },
     {
-        path: "/login",
-        name: "login",
-        component: login,
+        path: "/registro",
+        name: "registro",
+        component: registro,
     }
-    // {
-    //     path: "/horario",
-    //     name: "horario",
-    //     component: Horario,
-    // },
-    // {
-    //     path: "/ciclos",
-    //     name: "ciclos",
-    //     component: HelloWorld,
-    // },
-    // {
-    //     path: "/props",
-    //     name: "props",
-    //     component: Padre,
-    // },
-    //    {path: "/eventos",
-    //     name: "eventos",
-    //     component: eventos,
-    // },
-    // {path: "/registro",
-    //     name: "registro",
-    //     component: Registro,
-    // },
-    // {path: "/login",
-    //     name: "login",
-    //     component: Login,
-    // },
-    
+   
     
 ]
 
