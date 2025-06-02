@@ -10,7 +10,7 @@ export default {
       carouselItems: [
         {
           id: 1,
-          image: 'https://www.instyle.es/medio/2020/10/09/abrigos-tendencia_14fd5099_1200x630.jpg',
+          image: 'https://th.bing.com/th/id/R.0f5b13c78a94e00183c55d3010bcbe8f?rik=QC7B5dB63yiitw&pid=ImgRaw&r=0',
           title: 'Ofertas de Invierno',
           description: 'Hasta 50% de descuento en abrigos y suéteres',
           focus: 'center center'
@@ -18,14 +18,14 @@ export default {
         },
         {
           id: 2,
-          image: 'https://i.pinimg.com/originals/27/44/d8/2744d8e203749a3b4548edec468a8b89.jpg',
-          title: 'Nueva Colección',
+          image: 'https://th.bing.com/th/id/OIP.F9o_n-_qZqMkMN-D0ZK1ZQHaEK?rs=1&pid=ImgDetMain',
+          title: 'Ropa Nueva',
           description: 'Descubre las últimas tendencias en moda masculina',
           focus: 'center 30%'
         },
         {
           id: 3,
-          image: 'https://embargosalobestia.vtexassets.com/assets/vtex.file-manager-graphql/images/fea8b739-6faf-41a8-a6da-cdeef939a40c___88d8363de64a639f25fd0fafe8ea0971.jpg',
+          image: 'https://jofeper.pt/wp-content/uploads/2020/03/Entregas-1024x248.jpg',
           
           description: 'En compras mayores a $500,00',
           focus: 'center 70%'
@@ -145,13 +145,11 @@ export default {
     <img :src="imagenPrincipal" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
       style="z-index: -1;" alt="Imagen principal">
 
-    <div class="position-absolute top-50 start-50 translate-middle text-white text-center px-3 py-4 bg-dark bg-opacity-50 rounded"
+    <div class="position-absolute top-50 start-50 translate-middle text-white px-3 py-4 bg-dark rounded text-center "
       style="max-width: 90%; max-height: 90%; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;">
       <h1 class="fw-bold fs-1">Bienvenido a Paca Online</h1>
-      <p>La mejor tienda de ropa online</p>
-      <p>Con los mejores precios y calidad</p>
-      <p>Puedes comprar desde la comodidad de tu casa</p>
-      <p>Y recibirlo en la puerta de tu casa</p>
+      <p >La mejor tienda de ropa online Con los mejores precios y calidad Puedes comprar desde la comodidad de tu casa Y recibirlo en la puerta de tu casa</p>
+     
       <router-link to="/productos" class="btn btn-primary mt-3">Explorar Productos</router-link>
     </div>
   </div>
@@ -287,7 +285,7 @@ body {
 
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(64, 233, 49, 0.863);
 }
 
 .navbar-brand {
@@ -298,7 +296,7 @@ body {
 /* Carrusel optimizado */
 .carousel {
   height: 70vh;
-  min-height: 500px;
+  min-height: 600px;
   max-height: 800px;
   overflow: hidden;
 }
@@ -333,7 +331,7 @@ body {
 }
 
 .caption-content {
-  background-color: rgba(226, 214, 41, 0.884);
+  background-color: rgb(22, 22, 22);
   padding: 20px;
   border-radius: 10%;
   max-width: 300px;
@@ -356,6 +354,15 @@ body {
 .carousel-caption .btn {
   font-size: 17px; 
 }
+#mainCarousel {
+  margin-top: 50px; 
+  
+}
+.container.my-5 {
+  margin-top: 1px !important; 
+}
+
+
 
 /* Productos */
 .product-image {
@@ -387,7 +394,7 @@ body {
   color: #0d6efd !important;
 }
 
-/* Media queries */
+
 @media (max-width: 992px) {
   .carousel {
     height: 60vh;
@@ -418,7 +425,7 @@ body {
   .caption-content {
     max-width: 100%;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(206, 0, 0, 0.904);
   }
   
   .carousel-caption h3 {
