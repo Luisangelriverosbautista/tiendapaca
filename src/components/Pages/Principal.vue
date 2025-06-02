@@ -7,7 +7,30 @@ export default {
     return {
       iconoNav,
       imagenPrincipal,
-      
+      carouselItems: [
+        {
+          id: 1,
+          image: 'https://www.instyle.es/medio/2020/10/09/abrigos-tendencia_14fd5099_1200x630.jpg',
+          title: 'Ofertas de Invierno',
+          description: 'Hasta 50% de descuento en abrigos y suéteres',
+          focus: 'center center'
+          
+        },
+        {
+          id: 2,
+          image: 'https://i.pinimg.com/originals/27/44/d8/2744d8e203749a3b4548edec468a8b89.jpg',
+          title: 'Nueva Colección',
+          description: 'Descubre las últimas tendencias en moda masculina',
+          focus: 'center 30%'
+        },
+        {
+          id: 3,
+          image: 'https://embargosalobestia.vtexassets.com/assets/vtex.file-manager-graphql/images/fea8b739-6faf-41a8-a6da-cdeef939a40c___88d8363de64a639f25fd0fafe8ea0971.jpg',
+          
+          description: 'En compras mayores a $500,00',
+          focus: 'center 70%'
+        }
+      ],
       productos: [
         {
           id: 1,
@@ -116,39 +139,7 @@ export default {
     </div>
   </nav>
 
-  <!-- CARRUSEL OPTIMIZADO -->
-  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-indicators">
-      <button v-for="(item, index) in carouselItems" :key="'indicator-'+item.id" 
-              type="button" data-bs-target="#mainCarousel" :data-bs-slide-to="index" 
-              :class="{ active: index === 0 }" aria-current="true" :aria-label="'Slide '+ (index+1)">
-      </button>
-    </div>
-    
-    <div class="carousel-inner">
-      <div v-for="(item, index) in carouselItems" :key="'slide-'+item.id" 
-           :class="['carousel-item', { active: index === 0 }]">
-        <div class="carousel-img-wrapper" :style="{ 'background-image': `url(${item.image})`, 'background-position': item.focus }"></div>
-        <div class="carousel-caption">
-          <div class="caption-content">
-            <h3 class="display-5 fw-bold mb-3">{{ item.title }}</h3>
-            <p class="lead mb-4">{{ item.description }}</p>
-            <router-link to="/ofertas" class="btn btn-primary btn-lg px-4 py-2">Ver Ofertas</router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
+  
   <!-- PORTADA PRINCIPAL -->
   <div class="position-relative mt-3" style="height: 640px; overflow: hidden;">
     <img :src="imagenPrincipal" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
@@ -163,6 +154,38 @@ export default {
       <p>Y recibirlo en la puerta de tu casa</p>
       <router-link to="/productos" class="btn btn-primary mt-3">Explorar Productos</router-link>
     </div>
+  </div>
+<!-- CARRUSEL OPTIMIZADO -->
+  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+      <button v-for="(item, index) in carouselItems" :key="'indicator-'+item.id" 
+              type="button" data-bs-target="#mainCarousel" :data-bs-slide-to="index" 
+              :class="{ active: index === 0 }" aria-current="true" :aria-label="'Slide '+ (index+1)">
+      </button>
+    </div>
+    
+    <div class="carousel-inner">
+      <div v-for="(item, index) in carouselItems" :key="'slide-'+item.id" 
+           :class="['carousel-item', { active: index === 0 }]">
+        <div class="carousel-img-wrapper" :style="{ 'background-image': `url(${item.image})`, 'background-position': item.focus }"></div>
+        <div class="carousel-caption">
+          <div class="caption-content">
+            <h3 class="display-7 fw-bold mb-6">{{ item.title }}</h3>
+            <p class="lead mb-6">{{ item.description }}</p>
+            <router-link to="/ofertas" class="btn btn-primary btn-lg px-2 py-2">Ver Ofertas</router-link>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <!-- SECCIÓN DESTACADOS -->
@@ -237,17 +260,15 @@ export default {
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/nosotros" class="text-white text-decoration-none">Sobre Nosotros</router-link></li>
-            <li class="mb-2"><router-link to="/contacto" class="text-white text-decoration-none">Contacto</router-link></li>
             <li class="mb-2"><router-link to="/preguntas-frecuentes" class="text-white text-decoration-none">Preguntas Frecuentes</router-link></li>
             <li><router-link to="/terminos" class="text-white text-decoration-none">Términos y Condiciones</router-link></li>
           </ul>
         </div>
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Contacto</h5>
-          <p><i class="bi bi-geo-alt-fill me-2"></i> Calle Falsa 123, Bogotá</p>
-          <p><i class="bi bi-telephone-fill me-2"></i> +57 123 456 7890</p>
-          <p><i class="bi bi-envelope-fill me-2"></i> info@pacaonline.com</p>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Calle Madero 123, Oaxaca</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +57 934 456 7890</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> serasPaca12_p@gmail.com</p>
         </div>
       </div>
       <hr class="my-4 bg-secondary">
@@ -284,7 +305,7 @@ body {
 
 .carousel-inner,
 .carousel-item {
-  height: 100%;
+  height: 80%;
 }
 
 .carousel-img-wrapper {
@@ -306,20 +327,34 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1200px;
+  max-width: 400px;
   padding: 0 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .caption-content {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  max-width: 600px;
+  background-color: rgba(226, 214, 41, 0.884);
+  padding: 20px;
+  border-radius: 10%;
+  max-width: 300px;
+  
 }
 
 .carousel-item:not(.active) .carousel-img-wrapper {
   transform: scale(1.05);
+}
+.carousel-caption h3 {
+  font-size: 35px; 
+}
+
+
+.carousel-caption p {
+  font-size: 17px; 
+}
+
+
+.carousel-caption .btn {
+  font-size: 17px; 
 }
 
 /* Productos */
