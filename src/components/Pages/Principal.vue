@@ -25,7 +25,7 @@ export default {
         },
         {
           id: 3,
-          image: 'https://www.shutterstock.com/image-vector/free-shipping-truck-icon-emblem-260nw-2472933809.jpg',
+          image: 'https://static.vecteezy.com/system/resources/previews/015/413/505/large_2x/lorry-and-pile-of-boxes-transportation-of-goods-and-construction-materials-heavy-volume-and-weight-delivery-when-ordering-goods-movement-cargo-truck-illustration-vector.jpg',
 
           description: 'En compras mayores a $500,00',
           focus: 'center 70%'
@@ -84,7 +84,7 @@ export default {
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
-      <router-link class="navbar-brand d-flex align-items-center" to="/login">
+      <router-link class="navbar-brand d-flex align-items-center" to="/">
         <img :src="iconoNav" width="35" height="35" class="me-2" alt="icono_nav">
         Paca Online
       </router-link>
@@ -257,7 +257,7 @@ export default {
   </div>
 
   <!-- FOOTER -->
-  <footer id="footer" class="bg-dark text-white py-5">
+  <footer id="footer" class="bg-dark text-white  mt-3 py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
