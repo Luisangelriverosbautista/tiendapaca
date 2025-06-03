@@ -16,7 +16,7 @@
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/productos">Productos</router-link>
+            <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
@@ -24,10 +24,10 @@
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/categoria/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
