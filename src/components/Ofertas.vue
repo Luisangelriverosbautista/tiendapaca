@@ -1,5 +1,6 @@
+
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
       <router-link class="navbar-brand d-flex align-items-center" to="/">
         <img :src="iconoNav" width="35" height="35" class="me-2" alt="icono_nav">
@@ -15,7 +16,7 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-isem">
             <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
@@ -24,10 +25,10 @@
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,7 +58,6 @@
       </div>
     </div>
   </nav>
-
 
   <div class="ofertas-page">
     <h1>🔥Ofertas Exclusivas🔥</h1>
@@ -174,7 +174,19 @@
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        
+        <div class="col-md-2 mb-4">
+          <h5 class="fw-bold mb-3">Categorías</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><router-link to="/categoria/hombre"
+                class="text-white text-decoration-none">Hombre</router-link></li>
+            <li class="mb-2"><router-link to="/categoria/mujer"
+                class="text-white text-decoration-none">Mujer</router-link></li>
+            <li class="mb-2"><router-link to="/categoria/ninos"
+                class="text-white text-decoration-none">Niños</router-link></li>
+            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
+            </li>
+          </ul>
+        </div>
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">
