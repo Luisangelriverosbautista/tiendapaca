@@ -58,8 +58,8 @@
     </div>
   </nav>
 
-  <div class="producttitu">
-    <h1>|Todos los productos|</h1>
+  <div class="ofertas-page">
+    <h1>Hombre</h1>
     
     <div class="productos-grid">
       <!-- Producto 1 -->
@@ -97,67 +97,34 @@
 
       <!-- Producto 3 -->
       <div class="producto-card card">
-        <div class="badge-oferta">-35%</div>
-        <img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2020/09/reloj-inteligente-banlvs-2069621.jpg?tf=3840x" 
-             alt="Reloj Inteligente" 
+        <img src="https://i.etsystatic.com/23197211/r/il/85976e/2431817137/il_fullxfull.2431817137_iztl.jpg" 
+             alt="camisa" 
              class="producto-imagen product-image">
         <div class="producto-info">
-          <h3>Reloj Inteligente</h3>
+          <h3>Camisa Formal</h3>
           <div class="precios">
-            <span class="precio-anterior">$199</span>
-            <span class="precio-oferta">$129</span>
+            <span class="precio-oferta">$450</span>
           </div>
-           <router-link to="/reloj"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+          <router-link to="/camisa"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
         </div>
       </div>
 
       <!-- Producto 4 -->
       <div class="producto-card card">
-        <div class="badge-oferta">-15%</div>
-        <img src="https://www.aktitud.co/wp-content/uploads/2022/11/Panther-1-scaled.jpg" 
-             alt="Gorra" 
+        <img src="https://www.bolf.es/spa_pl_Chaqueta-de-cuero-biker-para-hombre-marron-Bolf-2008-79556_1.jpg" 
+             alt="Chaqueta" 
              class="producto-imagen product-image">
         <div class="producto-info">
-          <h3>Gorra</h3>
-          <div class="precios">
-            <span class="precio-anterior">$89</span>
-            <span class="precio-oferta">$75</span>
+          <h3>Chaqueta de Cuero</h3>
+          <div class="precios"> 
+            <span class="precio-oferta">$850</span>
           </div>
-           <router-link to="/Gorra"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+          <router-link to="/chaqueta"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
         </div>
       </div>
 
-      <!-- Producto 5 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-50%</div>
-        <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2020/06/mochila-viajero.jpg" 
-             alt="Mochila Viaje" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Mochila de Viaje</h3>
-          <div class="precios">
-            <span class="precio-anterior">$600</span>
-            <span class="precio-oferta">$300</span>
-          </div>
-           <router-link to="/mochila"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 6 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-25%</div>
-        <img src="https://i.pinimg.com/736x/ff/cf/00/ffcf00e4e0acfe0447f4e1b7c9d548ef.jpg" 
-             alt="Conjunto" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Conjunto Deportivo</h3>
-          <div class="precios">
-            <span class="precio-anterior">$249</span>
-            <span class="precio-oferta">$186</span>
-          </div>
-           <router-link to="/conjunto"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
+      
+      
     </div>
   </div>
   <footer id="footer" class="bg-dark mt-3 text-white py-5">
@@ -199,16 +166,16 @@
 </template>
 
 <style scoped>
-.productitu {
+.ofertas-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: 'Arial', sans-serif;
 }
 
-.producttitu h1 {
+.ofertas-page h1 {
   text-align: center;
-  color: #0c0c0c;
+  color: #ff5722;
   margin-bottom: 40px;
   font-size: 2.2rem;
 }

@@ -58,9 +58,72 @@ const routes = [
   path: '/conjunto',
   name: 'Conjunto',
   component: () => import('@/components/productos/ConjuntoDeportivo.vue')
-}
-
-
+},
+{
+  path: '/camisa',
+  name: 'Camisa',
+  component: () => import('@/components/productos/CamisaFormal.vue')
+},
+{
+  path: '/chaqueta',
+  name: 'Chaqueta',
+  component: () => import('@/components/productos/ChaquetadeCuero.vue')
+},
+{
+  path: '/sueter',
+  name: 'Sueter',
+  component: () => import('@/components/productos/SueterNavideño.vue')
+},
+{
+  path: '/zapatosC',
+  name: 'ZapatosC',
+  component: () => import('@/components/productos/ZapatosCasuales.vue')
+},
+{
+  path: '/jeans',
+  name: 'Jeans',
+  component: () => import('@/components/productos/JeansSlimFit.vue')
+},
+{
+  path: '/abrigo',
+  name: 'Abrigo',
+  component: () => import('@/components/productos/AbrigodeInvierno.vue')
+},
+{
+  path: '/vestido',
+  name: 'Vestido',
+  component: () => import('@/components/productos/Vestido.vue')
+},
+{
+  path: '/pijama',
+  name: 'Pijama',
+  component: () => import('@/components/productos/Pijama.vue')
+},
+{
+  path: '/conjuntoN',
+  name: 'ConjuntoN',
+  component: () => import('@/components/productos/ConjuntoNino.vue')
+},
+{
+  path: '/accesorios',
+  name: 'Accesorios',
+  component: () => import('@/components/categoria/Accesorios.vue')
+},
+{
+  path: '/hombre',
+  name: 'Hombre',
+  component: () => import('@/components/categoria/Hombre.vue')
+},
+{
+  path: '/mujer',
+  name: 'Mujer',
+  component: () => import('@/components/categoria/Mujer.vue')
+},
+{
+  path: '/ninos',
+  name: 'Ninos',
+  component: () => import('@/components/categoria/Ninos.vue')
+},
 ];
 
 

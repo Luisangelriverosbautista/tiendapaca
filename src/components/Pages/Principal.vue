@@ -107,10 +107,10 @@ export default {
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/categoria/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -222,7 +222,7 @@ export default {
             <p class="card-text text-muted">{{ producto.descripcion }}</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <span class="fw-bold text-primary">{{ producto.precio }}</span>
-              <button class="btn btn-dark">Añadir al carrito</button>
+              <button class="boton-comprar">¡Lo quiero!</button>
             </div>
           </div>
         </div>
