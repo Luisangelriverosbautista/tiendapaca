@@ -58,8 +58,8 @@
     </div>
   </nav>
 
-  <div class="ofertas-page">
-    <h1>🔥Ofertas Exclusivas🔥</h1>
+  <div class="producttitu">
+    <h1>|Todos los productos|</h1>
     
     <div class="productos-grid">
       <!-- Producto 1 -->
@@ -199,16 +199,16 @@
 </template>
 
 <style scoped>
-.ofertas-page {
+.productitu {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: 'Arial', sans-serif;
 }
 
-.ofertas-page h1 {
+.producttitu h1 {
   text-align: center;
-  color: #ff5722;
+  color: #0c0c0c;
   margin-bottom: 40px;
   font-size: 2.2rem;
 }
