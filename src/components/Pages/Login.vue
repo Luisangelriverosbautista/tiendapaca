@@ -132,19 +132,7 @@ body {
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        <div class="col-md-2 mb-4">
-          <h5 class="fw-bold mb-3">Categorías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre"
-                class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer"
-                class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos"
-                class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
-            </li>
-          </ul>
-        </div>
+        
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">
