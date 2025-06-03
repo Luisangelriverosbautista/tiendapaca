@@ -131,10 +131,10 @@ export default {
           </button>
 
           <button type="button" class="btn btn-outline-info">
-            <router-link class="nav-link" to="/registro">Registrarse</router-link>
+            <router-link class="nav-link" to="/login">Registrarse</router-link>
           </button>
           <button type="button" class="btn btn-outline-danger">
-            <router-link class="nav-link" to="/login">Iniciar sesión</router-link>
+            <router-link class="nav-link" to="/iniciarS">Iniciar sesión</router-link>
           </button>
         </div>
       </div>
