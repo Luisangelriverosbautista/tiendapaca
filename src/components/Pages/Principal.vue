@@ -10,23 +10,23 @@ export default {
       carouselItems: [
         {
           id: 1,
-          image: 'https://th.bing.com/th/id/R.0f5b13c78a94e00183c55d3010bcbe8f?rik=QC7B5dB63yiitw&pid=ImgRaw&r=0',
+          image: 'https://blog.voxfeed.com/wp-content/uploads/2019/03/disen%CC%83o-mexicano-1.jpg ',
           title: 'Ofertas de Invierno',
           description: 'Hasta 50% de descuento en abrigos y suéteres',
           focus: 'center center'
-          
+
         },
         {
           id: 2,
-          image: 'https://th.bing.com/th/id/OIP.F9o_n-_qZqMkMN-D0ZK1ZQHaEK?rs=1&pid=ImgDetMain',
+          image: 'https://d1ih8jugeo2m5m.cloudfront.net/2024/08/ideas_para_tienda_de_ropa_infantil.jpg',
           title: 'Ropa Nueva',
           description: 'Descubre las últimas tendencias en moda masculina',
           focus: 'center 30%'
         },
         {
           id: 3,
-          image: 'https://jofeper.pt/wp-content/uploads/2020/03/Entregas-1024x248.jpg',
-          
+          image: 'https://www.shutterstock.com/image-vector/free-shipping-truck-icon-emblem-260nw-2472933809.jpg',
+
           description: 'En compras mayores a $500,00',
           focus: 'center 70%'
         }
@@ -102,7 +102,8 @@ export default {
             <router-link class="nav-link" to="/productos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
+              data-bs-toggle="dropdown">
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
@@ -116,7 +117,8 @@ export default {
             <router-link class="nav-link" to="/ofertas">Ofertas</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/contacto">Contacto</router-link>
+            <a class="nav-link" href="#footer">Contacto</a>
+            
           </li>
         </ul>
 
@@ -139,7 +141,7 @@ export default {
     </div>
   </nav>
 
-  
+
   <!-- PORTADA PRINCIPAL -->
   <div class="position-relative mt-3" style="height: 640px; overflow: hidden;">
     <img :src="imagenPrincipal" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
@@ -148,43 +150,65 @@ export default {
     <div class="position-absolute top-50 start-50 translate-middle text-white px-3 py-4 bg-dark rounded text-center "
       style="max-width: 90%; max-height: 90%; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none;">
       <h1 class="fw-bold fs-1">Bienvenido a Paca Online</h1>
-      <p >La mejor tienda de ropa online Con los mejores precios y calidad Puedes comprar desde la comodidad de tu casa Y recibirlo en la puerta de tu casa</p>
-     
+      <p>La mejor tienda de ropa online Con los mejores precios y calidad Puedes comprar desde la comodidad de tu casa Y
+        recibirlo en la puerta de tu casa</p>
+
       <router-link to="/productos" class="btn btn-primary mt-3">Explorar Productos</router-link>
     </div>
   </div>
-<!-- CARRUSEL OPTIMIZADO -->
-  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-indicators">
-      <button v-for="(item, index) in carouselItems" :key="'indicator-'+item.id" 
-              type="button" data-bs-target="#mainCarousel" :data-bs-slide-to="index" 
-              :class="{ active: index === 0 }" aria-current="true" :aria-label="'Slide '+ (index+1)">
-      </button>
-    </div>
-    
-    <div class="carousel-inner">
-      <div v-for="(item, index) in carouselItems" :key="'slide-'+item.id" 
-           :class="['carousel-item', { active: index === 0 }]">
-        <div class="carousel-img-wrapper" :style="{ 'background-image': `url(${item.image})`, 'background-position': item.focus }"></div>
-        <div class="carousel-caption">
-          <div class="caption-content">
-            <h3 class="display-7 fw-bold mb-6">{{ item.title }}</h3>
-            <p class="lead mb-6">{{ item.description }}</p>
-            <router-link to="/ofertas" class="btn btn-primary btn-lg px-2 py-2">Ver Ofertas</router-link>
-          </div>
+  <!-- CARRUSEL OPTIMIZADO -->
+<div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" style="position: relative; height: 100vh; overflow: hidden;">
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button v-for="(item, index) in carouselItems"
+      :key="'indicator-' + item.id"
+      type="button"
+      data-bs-target="#mainCarousel"
+      :data-bs-slide-to="index"
+      :class="{ active: index === 0 }"
+      :aria-label="'Slide ' + (index + 1)">
+    </button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner h-100">
+    <div v-for="(item, index) in carouselItems"
+      :key="'slide-' + item.id"
+      :class="['carousel-item', { active: index === 0 }]"
+      style="height: 100%; position: relative;">
+      
+      <!-- Imagen de fondo -->
+      <div class="carousel-img-wrapper w-100 h-100"
+        :style="{
+          'background-image': `url(${item.image})`,
+          'background-position': item.focus || 'center',
+          'background-size': 'cover',
+          'background-repeat': 'no-repeat'
+        }">
+      </div>
+
+      <!-- Contenido centrado -->
+      <div class="d-flex flex-column justify-content-center align-items-center text-white  text-center position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-25">
+        <div class="p-4 rounded bg-dark">
+          <h3 class="display-6 fw-bold mb-3">{{ item.title }}</h3>
+          <p class="lead mb-4">{{ item.description }}</p>
+          <router-link to="/ofertas" class="btn btn-primary btn-lg">Ver Ofertas</router-link>
         </div>
       </div>
     </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
 
   <!-- SECCIÓN DESTACADOS -->
   <div class="container my-5 py-5">
@@ -233,7 +257,7 @@ export default {
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-dark text-white py-5">
+  <footer id="footer" class="bg-dark text-white py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
@@ -249,17 +273,23 @@ export default {
         <div class="col-md-2 mb-4">
           <h5 class="fw-bold mb-3">Categorías</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre" class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer" class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos" class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link></li>
+            <li class="mb-2"><router-link to="/categoria/hombre"
+                class="text-white text-decoration-none">Hombre</router-link></li>
+            <li class="mb-2"><router-link to="/categoria/mujer"
+                class="text-white text-decoration-none">Mujer</router-link></li>
+            <li class="mb-2"><router-link to="/categoria/ninos"
+                class="text-white text-decoration-none">Niños</router-link></li>
+            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
+            </li>
           </ul>
         </div>
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/preguntas-frecuentes" class="text-white text-decoration-none">Preguntas Frecuentes</router-link></li>
-            <li><router-link to="/terminos" class="text-white text-decoration-none">Términos y Condiciones</router-link></li>
+            <li class="mb-2"><router-link to="/preguntas-frecuentes" class="text-white text-decoration-none">Preguntas
+                Frecuentes</router-link></li>
+            <li><router-link to="/terminos" class="text-white text-decoration-none">Términos y Condiciones</router-link>
+            </li>
           </ul>
         </div>
         <div class="col-md-3 mb-4">
@@ -285,7 +315,7 @@ body {
 
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 10px rgba(64, 233, 49, 0.863);
+  box-shadow: 0 5px 10px rgba(104, 131, 228, 0.863);
 }
 
 .navbar-brand {
@@ -335,31 +365,34 @@ body {
   padding: 20px;
   border-radius: 10%;
   max-width: 300px;
-  
+
 }
 
 .carousel-item:not(.active) .carousel-img-wrapper {
   transform: scale(1.05);
 }
+
 .carousel-caption h3 {
-  font-size: 35px; 
+  font-size: 35px;
 }
 
 
 .carousel-caption p {
-  font-size: 17px; 
+  font-size: 17px;
 }
 
 
 .carousel-caption .btn {
-  font-size: 17px; 
+  font-size: 17px;
 }
+
 #mainCarousel {
-  margin-top: 50px; 
-  
+  margin-top: 50px;
+
 }
+
 .container.my-5 {
-  margin-top: 1px !important; 
+  margin-top: 1px !important;
 }
 
 
@@ -400,12 +433,12 @@ body {
     height: 60vh;
     min-height: 400px;
   }
-  
+
   .carousel-caption {
     bottom: 10%;
     padding: 0 1.5rem;
   }
-  
+
   .caption-content {
     padding: 1.5rem;
   }
@@ -416,33 +449,33 @@ body {
     height: 50vh;
     min-height: 350px;
   }
-  
+
   .carousel-caption {
     bottom: 5%;
     text-align: center;
   }
-  
+
   .caption-content {
     max-width: 100%;
     padding: 1rem;
     background-color: rgba(206, 0, 0, 0.904);
   }
-  
+
   .carousel-caption h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .carousel-caption p {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-  
+
   .carousel-caption button {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
-  
+
   .product-image {
     height: 200px;
   }
