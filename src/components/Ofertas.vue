@@ -1,5 +1,5 @@
 <template>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
       <router-link class="navbar-brand d-flex align-items-center" to="/">
         <img :src="iconoNav" width="35" height="35" class="me-2" alt="icono_nav">
@@ -57,6 +57,7 @@
       </div>
     </div>
   </nav>
+
 
   <div class="ofertas-page">
     <h1>🔥Ofertas Exclusivas🔥</h1>

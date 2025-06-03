@@ -24,10 +24,10 @@
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/categoria/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -57,6 +57,7 @@
       </div>
     </div>
   </nav>
+
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -180,9 +181,17 @@
 </template>
 
 <script>
+import iconoNav from '/src/assets/ropa-masculina.png';
+import imagenPrincipal from '/src/assets/portada.jpg';
+
 export default {
-  name: 'ProductoDetail'
-}
+  data() {
+    return {
+      iconoNav,
+      imagenPrincipal,}
+    }
+  }
+
 </script>
 
 <style scoped>
