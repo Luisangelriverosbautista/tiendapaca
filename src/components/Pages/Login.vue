@@ -115,7 +115,7 @@ body {
 
       <div class="text-center mt-3">
         ¿Ya tienes cuenta?
-        <button class="btn btn-link p-0" @click="$emit('switchToLogin')">Inicia sesión</button>
+       <router-link  to="/iniciarS"><button class="btn btn-link p-0" @click="$emit('switchToLogin')">Inicia sesión</button></router-link> 
       </div>
     </div>
   </div>

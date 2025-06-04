@@ -71,7 +71,8 @@
 
       <div class="text-center mt-3">
         ¿No tienes cuenta?
-        <button class="btn btn-link p-0" @click="$emit('switchToRegister')">Regístrate</button>
+        <router-link to="/login"> <button class="btn btn-link p-0" @click="$emit('switchToRegister')">Regístrate</button></router-link>
+       
       </div>
     </div>
   </div>
