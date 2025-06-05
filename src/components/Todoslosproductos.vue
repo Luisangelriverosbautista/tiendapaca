@@ -28,6 +28,7 @@
               <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
               <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
               <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Deportivo">Deportivo</router-link></li>
             </ul>
           </li>
           <li class="nav-item">

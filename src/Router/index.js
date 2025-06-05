@@ -124,6 +124,11 @@ const routes = [
   name: 'Ninos',
   component: () => import('@/components/categoria/Ninos.vue')
 },
+{
+  path: '/deportivo',
+  name: 'Deportivo',
+  component: () => import('@/components/categoria/Deportivo.vue')
+},
 ];
 
 
