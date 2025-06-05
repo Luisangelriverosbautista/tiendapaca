@@ -1,4 +1,3 @@
-
 <template>
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
@@ -16,7 +15,7 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
-          <li class="nav-isem">
+          <li class="nav-item">
             <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
@@ -25,10 +24,10 @@
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -60,105 +59,51 @@
   </nav>
 
   <div class="ofertas-page">
-    <h1>🔥Ofertas Exclusivas🔥</h1>
-    
+    <h1>Niños</h1>
     <div class="productos-grid">
       <!-- Producto 1 -->
       <div class="producto-card card">
-        <div class="badge-oferta">-34%</div>
-        <img src="https://soyhombrealfa.com/wp-content/uploads/2017/03/Los-zapatos-deportivos-para-hombres-mas-vendidos-en-el-mundo.png" 
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjhayber.com%2Fuploads%2Fproducts%2FDN23069-400_3.jpg&f=1&nofb=1&ipt=5f642ba088a01db861be76daeea3cee00d6ba2fb8d8a13249641f6d045e7a188" 
              alt="Zapatos Deportivos" 
              class="producto-imagen product-image">
         <div class="producto-info">
-          <h3>Zapatos Deportivos</h3>
+          <h3>Conjunto Deportivo Niño</h3>
           <div class="precios">
-            <span class="precio-anterior">$500</span>
             <span class="precio-oferta">$350</span>
           </div>
-          <router-link to="/zapatos"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+          <router-link to="/conjuntoN"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
          
         </div>
       </div>
 
       <!-- Producto 2 -->
       <div class="producto-card card">
-        <div class="badge-oferta">-22%</div>
-        <img src="https://tecalzoshoes.com/wp-content/uploads/2022/12/5edceb95-207c-4393-8bf7-7a0ecfde854f.jpg" 
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rodecoracion.com%2F30656-thickbox_default%2Fvestido-nina-scotch-and-soda-estampado-flores-malva.jpg&f=1&nofb=1&ipt=51ed31ab5af4b0410833523e165947f710580fb36feeff0e817c3d7e47053617|" 
              alt="Chaleco" 
              class="producto-imagen product-image">
         <div class="producto-info">
-          <h3>Chaleco</h3>
+          <h3>Vestido Niña Flores</h3>
           <div class="precios">
-            <span class="precio-anterior">$350</span>
-            <span class="precio-oferta">$220</span>
+            <span class="precio-oferta">$250</span>
           </div>
-          <router-link to="/chaleco"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+          <router-link to="/Vestido"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
         </div>
       </div>
 
       <!-- Producto 3 -->
       <div class="producto-card card">
-        <div class="badge-oferta">-35%</div>
-        <img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2020/09/reloj-inteligente-banlvs-2069621.jpg?tf=3840x" 
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fa1%2F95%2F9e%2Fa1959ef59123351a2c75700e761b4607.jpg&f=1&nofb=1&ipt=3468375f7091b65100b11f527c6cd62e8e7fcad68bf6dfac5891e1ba23bdf66f" 
              alt="Reloj Inteligente" 
              class="producto-imagen product-image">
         <div class="producto-info">
-          <h3>Reloj Inteligente</h3>
+          <h3>Pijama Infantil Dinosaurios</h3>
           <div class="precios">
-            <span class="precio-anterior">$199</span>
-            <span class="precio-oferta">$129</span>
+            <span class="precio-oferta">$180</span>
           </div>
-           <router-link to="/reloj"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+           <router-link to="/pijama"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
         </div>
       </div>
 
-      <!-- Producto 4 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-15%</div>
-        <img src="https://www.aktitud.co/wp-content/uploads/2022/11/Panther-1-scaled.jpg" 
-             alt="Gorra" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Gorra</h3>
-          <div class="precios">
-            <span class="precio-anterior">$89</span>
-            <span class="precio-oferta">$75</span>
-          </div>
-           <router-link to="/Gorra"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 5 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-50%</div>
-        <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2020/06/mochila-viajero.jpg" 
-             alt="Mochila Viaje" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Mochila de Viaje</h3>
-          <div class="precios">
-            <span class="precio-anterior">$600</span>
-            <span class="precio-oferta">$300</span>
-          </div>
-           <router-link to="/mochila"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 6 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-25%</div>
-        <img src="https://i.pinimg.com/736x/ff/cf/00/ffcf00e4e0acfe0447f4e1b7c9d548ef.jpg" 
-             alt="Conjunto" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Conjunto Deportivo</h3>
-          <div class="precios">
-            <span class="precio-anterior">$249</span>
-            <span class="precio-oferta">$186</span>
-          </div>
-           <router-link to="/conjunto"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
     </div>
   </div>
   <footer id="footer" class="bg-dark mt-3 text-white py-5">
@@ -174,19 +119,7 @@
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        <div class="col-md-2 mb-4">
-          <h5 class="fw-bold mb-3">Categorías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre"
-                class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer"
-                class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos"
-                class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
-            </li>
-          </ul>
-        </div>
+        
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">

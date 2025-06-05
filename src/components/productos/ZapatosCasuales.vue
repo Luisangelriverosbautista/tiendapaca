@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
       <router-link class="navbar-brand d-flex align-items-center" to="/">
         <img :src="iconoNav" width="35" height="35" class="me-2" alt="icono_nav">
@@ -57,6 +57,7 @@
       </div>
     </div>
   </nav>
+
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -66,14 +67,12 @@
             <div class="col-md-6">
               <div class="position-relative h-100">
                 <img 
-                  src="https://soyhombrealfa.com/wp-content/uploads/2017/03/Los-zapatos-deportivos-para-hombres-mas-vendidos-en-el-mundo.png" 
+                  src="https://resources.claroshop.com/medios-plazavip/s2/15066/1980885/5fd7d6e98ada3-c408001-2_1_grd-1600x1600.jpg" 
                   class="img-fluid rounded-start product-image" 
                   alt="Zapatos Deportivos AlphaRun"
                 >
                 <!-- Badge de oferta -->
-                <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-2 rounded-end fw-bold">
-                  ¡30% OFF!
-                </span>
+                
                 <!-- Rating -->
                 <div class="position-absolute bottom-0 start-0 w-100 bg-white bg-opacity-75 p-2">
                   <div class="d-flex justify-content-center align-items-center">
@@ -93,39 +92,39 @@
             <!-- Contenido del producto -->
             <div class="col-md-6">
               <div class="card-body h-100 d-flex flex-column">
-                <h2 class="card-title fw-bold mb-3">Zapatos Deportivos AlphaRun</h2>
+                <h2 class="card-title fw-bold mb-3">Zapatos Casuales</h2>
                 
                 <!-- Precios -->
                 <div class="mb-3">
-                  <span class="text-danger fs-4 fw-bold">$350.00</span>
-                  <span class="text-decoration-line-through text-muted ms-2">$500.00</span>
-                  <span class="badge bg-success ms-2">Ahorras $150</span>
+                  <span class="text-danger fs-4 fw-bold">$1200.00</span>
+  
+
                 </div>
                 
                 <!-- Descripción -->
-                <p class="card-text mb-4">Los zapatos deportivos AlphaRun ofrecen máximo rendimiento con tecnología de amortiguación avanzada para corredores y atletas. Diseño ergonómico que se adapta a tu pie.</p>
+                <p class="card-text mb-4">Elegantes zapatos casuales para hombre, perfectos para cualquier ocasión. Combina comodidad y estilo con un diseño versátil que se adapta a looks formales e informales.</p>
                 
                 <!-- Características -->
                 <ul class="list-group list-group-flush mb-4">
                   <li class="list-group-item d-flex align-items-center">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Material: Malla transpirable con suela de goma
+                    Material: Cuero genuino de alta calidad
                   </li>
                   <li class="list-group-item d-flex align-items-center">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Amortiguación: Tecnología AirFlex para mayor comodidad
+                    Plantilla acolchada para mayor comodidad
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Suela de goma antideslizante
+                  </li>
+                  <li class="list-group-item d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Diseño transpirable
                   </li>
                   <li class="list-group-item d-flex align-items-center">
                     <i class="bi bi-check-circle-fill text-success me-2"></i>
                     Disponible en tallas: 24 a 30
-                  </li>
-                  <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Colores: Negro, Azul, Rojo, Blanco
-                  </li>
-                  <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Peso ligero: 280g por zapato
                   </li>
                 </ul>
                 
@@ -145,7 +144,7 @@
       </div>
     </div>
   </div>
-  <footer id="footer" class="bg-dark text-white mt-3 py-5">
+  <footer id="footer" class="bg-dark text-white  mt-3 py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
@@ -184,9 +183,17 @@
 </template>
 
 <script>
+import iconoNav from '/src/assets/ropa-masculina.png';
+import imagenPrincipal from '/src/assets/portada.jpg';
+
 export default {
-  name: 'ProductoDetail'
-}
+  data() {
+    return {
+      iconoNav,
+      imagenPrincipal,}
+    }
+  }
+
 </script>
 
 <style scoped>

@@ -37,43 +37,50 @@ export default {
           nombre: 'Abrigo de Invierno',
           precio: '$900',
           imagen: 'https://i5.walmartimages.com/seo/Chaqueta-acolchada-de-algod-n-con-capucha-para-mujer-abrigo-c-lido-longitud-media-forro-polar-Parkas-delgadas-Chaquetas-ajustadas-cremallera-gruesa-I_df321387-0812-49f6-ba52-44eaefb51c8b.7dee4db5b487fa75f82c9ac673949e4a.jpeg',
-          descripcion: 'Abrigo cálido para el invierno con capucha desmontable'
+          descripcion: 'Abrigo cálido para el invierno con capucha desmontable',
+          routerLink: '/abrigo'
         },
         {
           id: 2,
           nombre: 'Jeans Slim Fit',
           precio: '$585',
           imagen: 'https://image.made-in-china.com/2f0j10kZFEYpRqJrGS/-Skinny-Jeans-apretados-de-alta-calidad-para-la-.jpg',
-          descripcion: 'Jeans ajustados de alta calidad en varios colores'
+          descripcion: 'Jeans ajustados de alta calidad en varios colores',
+          routerLink: '/jeans'
         },
         {
           id: 3,
           nombre: 'Camisa Formal',
           precio: '$450',
           imagen: 'https://i.etsystatic.com/23197211/r/il/85976e/2431817137/il_fullxfull.2431817137_iztl.jpg',
-          descripcion: 'Camisa de vestir 100% algodón para ocasiones especiales'
+          descripcion: 'Camisa de vestir 100% algodón para ocasiones especiales',
+          routerLink: '/camisa'
         },
         {
           id: 4,
           nombre: 'Zapatos Casuales',
           precio: '$1200',
           imagen: 'https://resources.claroshop.com/medios-plazavip/s2/15066/1980885/5fd7d6e98ada3-c408001-2_1_grd-1600x1600.jpg',
-          descripcion: 'Zapatos cómodos para uso diario'
+          descripcion: 'Zapatos cómodos para uso diario',
+          routerLink: '/zapatosC'
         },
         {
           id: 5,
           nombre: 'Chaqueta de Cuero',
           precio: '$850',
           imagen: 'https://www.bolf.es/spa_pl_Chaqueta-de-cuero-biker-para-hombre-marron-Bolf-2008-79556_1.jpg',
-          descripcion: 'Chaqueta de cuero genuino con forro interior'
+          descripcion: 'Chaqueta de cuero genuino con forro interior',
+          routerLink: '/chaqueta'
         },
         {
           id: 6,
           nombre: 'Suéter Navideño',
           precio: '$220',
           imagen: 'https://images-na.ssl-images-amazon.com/images/I/819WOrkMLEL._AC_SL1424_.jpg',
-          descripcion: 'Suéter divertido para fiestas de fin de año'
+          descripcion: 'Suéter divertido para fiestas de fin de año',
+          routerLink: '/sueter'
         }
+
       ]
     }
   },
@@ -99,7 +106,7 @@ export default {
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/productos">Productos</router-link>
+            <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
@@ -107,10 +114,10 @@ export default {
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/categoria/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -153,7 +160,7 @@ export default {
       <p>La mejor tienda de ropa online Con los mejores precios y calidad Puedes comprar desde la comodidad de tu casa Y
         recibirlo en la puerta de tu casa</p>
 
-      <router-link to="/productos" class="btn btn-primary mt-3">Explorar Productos</router-link>
+      <router-link to="/todoslosproductos" class="btn btn-primary mt-3">Explorar Productos</router-link>
     </div>
   </div>
   <!-- CARRUSEL OPTIMIZADO -->
@@ -222,14 +229,17 @@ export default {
             <p class="card-text text-muted">{{ producto.descripcion }}</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <span class="fw-bold text-primary">{{ producto.precio }}</span>
-              <button class="btn btn-dark">Añadir al carrito</button>
+              <router-link :to="producto.routerLink || `/producto/${producto.id}`">
+    <button class="boton-comprar">¡Lo quiero!</button>
+  </router-link>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="text-center mt-5">
-      <router-link to="/productos" class="btn btn-outline-primary btn-lg">Ver todos los productos</router-link>
+      <router-link to="/Todoslosproductos" class="btn btn-outline-primary btn-lg">Ver todos los productos</router-link>
     </div>
   </div>
 
@@ -242,14 +252,14 @@ export default {
           <div class="p-5 bg-white rounded shadow-sm text-center h-100">
             <h3 class="fw-bold mb-3">Hasta 40% OFF</h3>
             <p class="mb-4">En toda la colección de invierno</p>
-            <router-link to="/ofertas/invierno" class="btn btn-danger">Ver Ofertas</router-link>
+            <router-link to="/ofertas" class="btn btn-danger">Ver Ofertas</router-link>
           </div>
         </div>
         <div class="col-md-6">
           <div class="p-5 bg-white rounded shadow-sm text-center h-100">
             <h3 class="fw-bold mb-3">2x1 en Accesorios</h3>
             <p class="mb-4">En gorras, bufandas y guantes</p>
-            <router-link to="/ofertas/accesorios" class="btn btn-success">Aprovechar</router-link>
+            <router-link to="/Accesorios" class="btn btn-success">Aprovechar</router-link>
           </div>
         </div>
       </div>
@@ -270,19 +280,7 @@ export default {
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        <div class="col-md-2 mb-4">
-          <h5 class="fw-bold mb-3">Categorías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre"
-                class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer"
-                class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos"
-                class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
-            </li>
-          </ul>
-        </div>
+       
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">
@@ -308,6 +306,10 @@ export default {
 </template>
 
 <style scoped>
+.boton-comprar:hover {
+  background: #333333; /* Negro más claro al hover */
+  border-color: #333333;
+}
 /* Estilos generales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -496,5 +498,21 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+.boton-comprar {
+  width: 100%;
+  padding: 12px;
+  background: #000000; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  border: 1px solid #000000; /* Borde negro */
+  border-radius: 0; /* Esquinas rectas */
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  text-transform: none; /* Mantiene "¡Lo quiero!" */
 }
 </style>

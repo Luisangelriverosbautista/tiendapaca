@@ -1,4 +1,3 @@
-
 <template>
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
@@ -16,7 +15,7 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
-          <li class="nav-isem">
+          <li class="nav-item">
             <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
@@ -25,10 +24,10 @@
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -60,91 +59,11 @@
   </nav>
 
   <div class="ofertas-page">
-    <h1>🔥Ofertas Exclusivas🔥</h1>
+    <h1>mujer</h1>
     
     <div class="productos-grid">
+
       <!-- Producto 1 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-34%</div>
-        <img src="https://soyhombrealfa.com/wp-content/uploads/2017/03/Los-zapatos-deportivos-para-hombres-mas-vendidos-en-el-mundo.png" 
-             alt="Zapatos Deportivos" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Zapatos Deportivos</h3>
-          <div class="precios">
-            <span class="precio-anterior">$500</span>
-            <span class="precio-oferta">$350</span>
-          </div>
-          <router-link to="/zapatos"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-         
-        </div>
-      </div>
-
-      <!-- Producto 2 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-22%</div>
-        <img src="https://tecalzoshoes.com/wp-content/uploads/2022/12/5edceb95-207c-4393-8bf7-7a0ecfde854f.jpg" 
-             alt="Chaleco" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Chaleco</h3>
-          <div class="precios">
-            <span class="precio-anterior">$350</span>
-            <span class="precio-oferta">$220</span>
-          </div>
-          <router-link to="/chaleco"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-35%</div>
-        <img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2020/09/reloj-inteligente-banlvs-2069621.jpg?tf=3840x" 
-             alt="Reloj Inteligente" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Reloj Inteligente</h3>
-          <div class="precios">
-            <span class="precio-anterior">$199</span>
-            <span class="precio-oferta">$129</span>
-          </div>
-           <router-link to="/reloj"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 4 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-15%</div>
-        <img src="https://www.aktitud.co/wp-content/uploads/2022/11/Panther-1-scaled.jpg" 
-             alt="Gorra" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Gorra</h3>
-          <div class="precios">
-            <span class="precio-anterior">$89</span>
-            <span class="precio-oferta">$75</span>
-          </div>
-           <router-link to="/Gorra"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 5 -->
-      <div class="producto-card card">
-        <div class="badge-oferta">-50%</div>
-        <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2020/06/mochila-viajero.jpg" 
-             alt="Mochila Viaje" 
-             class="producto-imagen product-image">
-        <div class="producto-info">
-          <h3>Mochila de Viaje</h3>
-          <div class="precios">
-            <span class="precio-anterior">$600</span>
-            <span class="precio-oferta">$300</span>
-          </div>
-           <router-link to="/mochila"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
-        </div>
-      </div>
-
-      <!-- Producto 6 -->
       <div class="producto-card card">
         <div class="badge-oferta">-25%</div>
         <img src="https://i.pinimg.com/736x/ff/cf/00/ffcf00e4e0acfe0447f4e1b7c9d548ef.jpg" 
@@ -159,6 +78,63 @@
            <router-link to="/conjunto"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
         </div>
       </div>
+
+      <!-- Producto 2 -->
+      <div class="producto-card card">
+        <img src="https://i5.walmartimages.com/seo/Chaqueta-acolchada-de-algod-n-con-capucha-para-mujer-abrigo-c-lido-longitud-media-forro-polar-Parkas-delgadas-Chaquetas-ajustadas-cremallera-gruesa-I_df321387-0812-49f6-ba52-44eaefb51c8b.7dee4db5b487fa75f82c9ac673949e4a.jpeg" 
+             alt="Conjunto" 
+             class="producto-imagen product-image">
+        <div class="producto-info">
+          <h3>Abrigo de Invierno</h3>
+          <div class="precios">
+            <span class="precio-oferta">$900</span>
+          </div>
+           <router-link to="/abrigo"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto-card card">
+        <img src="https://image.made-in-china.com/2f0j10kZFEYpRqJrGS/-Skinny-Jeans-apretados-de-alta-calidad-para-la-.jpg" 
+             alt="Jeans" 
+             class="producto-imagen product-image">
+        <div class="producto-info">
+          <h3>Jeans Slim Fit</h3>
+          <div class="precios">
+            <span class="precio-oferta">$585</span>
+          </div>
+           <router-link to="/jeans"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto-card card">
+        <img src="https://resources.claroshop.com/medios-plazavip/s2/15066/1980885/5fd7d6e98ada3-c408001-2_1_grd-1600x1600.jpg" 
+             alt="ZapatosC" 
+             class="producto-imagen product-image">
+        <div class="producto-info">
+          <h3>Zapatos Casuales</h3>
+          <div class="precios">
+            <span class="precio-oferta">$1200</span>
+          </div>
+           <router-link to="/ZapatosC"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto-card card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/819WOrkMLEL._AC_SL1424_.jpg" 
+             alt="Sueter" 
+             class="producto-imagen product-image">
+        <div class="producto-info">
+          <h3>Suéter Navideño</h3>
+          <div class="precios">
+            <span class="precio-oferta">$220</span>
+          </div>
+           <router-link to="/sueter"> <button class="boton-comprar">¡Lo quiero!</button></router-link>
+        </div>
+      </div>
+
     </div>
   </div>
   <footer id="footer" class="bg-dark mt-3 text-white py-5">
@@ -174,19 +150,7 @@
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        <div class="col-md-2 mb-4">
-          <h5 class="fw-bold mb-3">Categorías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre"
-                class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer"
-                class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos"
-                class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
-            </li>
-          </ul>
-        </div>
+        
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">

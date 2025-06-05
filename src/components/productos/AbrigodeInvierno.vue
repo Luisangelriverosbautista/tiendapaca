@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top">
     <div class="container-fluid">
       <router-link class="navbar-brand d-flex align-items-center" to="/">
         <img :src="iconoNav" width="35" height="35" class="me-2" alt="icono_nav">
@@ -57,6 +57,7 @@
       </div>
     </div>
   </nav>
+
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -66,14 +67,12 @@
             <div class="col-md-6">
               <div class="position-relative h-100">
                 <img 
-                  src="https://soyhombrealfa.com/wp-content/uploads/2017/03/Los-zapatos-deportivos-para-hombres-mas-vendidos-en-el-mundo.png" 
+                  src="https://i5.walmartimages.com/seo/Chaqueta-acolchada-de-algod-n-con-capucha-para-mujer-abrigo-c-lido-longitud-media-forro-polar-Parkas-delgadas-Chaquetas-ajustadas-cremallera-gruesa-I_df321387-0812-49f6-ba52-44eaefb51c8b.7dee4db5b487fa75f82c9ac673949e4a.jpeg" 
                   class="img-fluid rounded-start product-image" 
                   alt="Zapatos Deportivos AlphaRun"
                 >
                 <!-- Badge de oferta -->
-                <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-2 rounded-end fw-bold">
-                  ¡30% OFF!
-                </span>
+
                 <!-- Rating -->
                 <div class="position-absolute bottom-0 start-0 w-100 bg-white bg-opacity-75 p-2">
                   <div class="d-flex justify-content-center align-items-center">
@@ -93,13 +92,12 @@
             <!-- Contenido del producto -->
             <div class="col-md-6">
               <div class="card-body h-100 d-flex flex-column">
-                <h2 class="card-title fw-bold mb-3">Zapatos Deportivos AlphaRun</h2>
+                <h2 class="card-title fw-bold mb-3">Abrigo de Invierno</h2>
                 
                 <!-- Precios -->
                 <div class="mb-3">
-                  <span class="text-danger fs-4 fw-bold">$350.00</span>
-                  <span class="text-decoration-line-through text-muted ms-2">$500.00</span>
-                  <span class="badge bg-success ms-2">Ahorras $150</span>
+                  <span class="text-danger fs-4 fw-bold">$900.00</span>
+
                 </div>
                 
                 <!-- Descripción -->
@@ -145,7 +143,7 @@
       </div>
     </div>
   </div>
-  <footer id="footer" class="bg-dark text-white mt-3 py-5">
+  <footer id="footer" class="bg-dark text-white  mt-3 py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
@@ -184,9 +182,17 @@
 </template>
 
 <script>
+import iconoNav from '/src/assets/ropa-masculina.png';
+import imagenPrincipal from '/src/assets/portada.jpg';
+
 export default {
-  name: 'ProductoDetail'
-}
+  data() {
+    return {
+      iconoNav,
+      imagenPrincipal,}
+    }
+  }
+
 </script>
 
 <style scoped>

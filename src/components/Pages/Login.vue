@@ -32,7 +32,7 @@ body {
             <router-link class="nav-link" to="/">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/productos">Productos</router-link>
+            <router-link class="nav-link" to="/todoslosproductos">Productos</router-link>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
@@ -40,10 +40,10 @@ body {
               Categorías
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-              <li><router-link class="dropdown-item" to="/categoria/hombre">Hombre</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/mujer">Mujer</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/ninos">Niños</router-link></li>
-              <li><router-link class="dropdown-item" to="/categoria/accesorios">Accesorios</router-link></li>
+              <li><router-link class="dropdown-item" to="/Hombre">Hombre</router-link></li>
+              <li><router-link class="dropdown-item" to="/Mujer">Mujer</router-link></li>
+              <li><router-link class="dropdown-item" to="/Ninos">Niños</router-link></li>
+              <li><router-link class="dropdown-item" to="/Accesorios">Accesorios</router-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -115,7 +115,7 @@ body {
 
       <div class="text-center mt-3">
         ¿Ya tienes cuenta?
-        <button class="btn btn-link p-0" @click="$emit('switchToLogin')">Inicia sesión</button>
+       <router-link  to="/iniciarS"><button class="btn btn-link p-0" @click="$emit('switchToLogin')">Inicia sesión</button></router-link> 
       </div>
     </div>
   </div>
@@ -132,19 +132,7 @@ body {
             <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
           </div>
         </div>
-        <div class="col-md-2 mb-4">
-          <h5 class="fw-bold mb-3">Categorías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><router-link to="/categoria/hombre"
-                class="text-white text-decoration-none">Hombre</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/mujer"
-                class="text-white text-decoration-none">Mujer</router-link></li>
-            <li class="mb-2"><router-link to="/categoria/ninos"
-                class="text-white text-decoration-none">Niños</router-link></li>
-            <li><router-link to="/categoria/accesorios" class="text-white text-decoration-none">Accesorios</router-link>
-            </li>
-          </ul>
-        </div>
+        
         <div class="col-md-3 mb-4">
           <h5 class="fw-bold mb-3">Información</h5>
           <ul class="list-unstyled">

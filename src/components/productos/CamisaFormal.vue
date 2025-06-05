@@ -57,6 +57,7 @@
       </div>
     </div>
   </nav>
+
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -66,14 +67,10 @@
             <div class="col-md-6">
               <div class="position-relative h-100">
                 <img 
-                  src="https://soyhombrealfa.com/wp-content/uploads/2017/03/Los-zapatos-deportivos-para-hombres-mas-vendidos-en-el-mundo.png" 
+                  src="https://i.etsystatic.com/23197211/r/il/85976e/2431817137/il_fullxfull.2431817137_iztl.jpg" 
                   class="img-fluid rounded-start product-image" 
-                  alt="Zapatos Deportivos AlphaRun"
+                  alt="Camisa Formal"
                 >
-                <!-- Badge de oferta -->
-                <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-2 rounded-end fw-bold">
-                  ¡30% OFF!
-                </span>
                 <!-- Rating -->
                 <div class="position-absolute bottom-0 start-0 w-100 bg-white bg-opacity-75 p-2">
                   <div class="d-flex justify-content-center align-items-center">
@@ -82,59 +79,68 @@
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
+                      <i class="bi bi-star"></i>
                     </span>
-                    <span class="small">4.8 (124 reseñas)</span>
+                    <span class="small">4.0 (85 reseñas)</span>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <!-- Contenido del producto -->
             <div class="col-md-6">
               <div class="card-body h-100 d-flex flex-column">
-                <h2 class="card-title fw-bold mb-3">Zapatos Deportivos AlphaRun</h2>
+                <h2 class="card-title fw-bold mb-3">Camisa Formal</h2>
                 
                 <!-- Precios -->
                 <div class="mb-3">
-                  <span class="text-danger fs-4 fw-bold">$350.00</span>
-                  <span class="text-decoration-line-through text-muted ms-2">$500.00</span>
-                  <span class="badge bg-success ms-2">Ahorras $150</span>
+                  <span class="text-dark fs-4 fw-bold">$450.00</span>
                 </div>
                 
                 <!-- Descripción -->
-                <p class="card-text mb-4">Los zapatos deportivos AlphaRun ofrecen máximo rendimiento con tecnología de amortiguación avanzada para corredores y atletas. Diseño ergonómico que se adapta a tu pie.</p>
+                <p class="card-text mb-4">Elegante camisa formal para ocasiones especiales. Corte clásico y ajuste perfecto que combina estilo y comodidad. Ideal para eventos de negocios o reuniones importantes.</p>
                 
                 <!-- Características -->
                 <ul class="list-group list-group-flush mb-4">
                   <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Material: Malla transpirable con suela de goma
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    Material: Algodón 100% premium
                   </li>
                   <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Amortiguación: Tecnología AirFlex para mayor comodidad
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    Cuello clásico con refuerzo interior
                   </li>
                   <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Disponible en tallas: 24 a 30
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    Doble botonadura en puños
                   </li>
                   <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Colores: Negro, Azul, Rojo, Blanco
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    Planchado permanente
                   </li>
                   <li class="list-group-item d-flex align-items-center">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Peso ligero: 280g por zapato
+                    <i class="bi bi-patch-check-fill text-primary me-2"></i>
+                    Disponible en tallas S, M, L, XL
                   </li>
                 </ul>
                 
+                <!-- Selector de talla -->
+                <div class="mb-4">
+                  <label class="form-label fw-bold">Talla:</label>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-secondary">S</button>
+                    <button class="btn btn-outline-secondary">M</button>
+                    <button class="btn btn-outline-secondary">L</button>
+                    <button class="btn btn-outline-secondary">XL</button>
+                  </div>
+                </div>
+                
                 <!-- Botones -->
                 <div class="mt-auto d-flex flex-wrap gap-2">
-                  <button class="btn btn-primary flex-grow-1 py-2">
-                    <i class="bi bi-cart-plus me-2"></i>Añadir al carrito
-                  </button>
-                  <button class="btn btn-outline-secondary flex-grow-1 py-2">
+                  <router-link to="/camisa" class="btn btn-primary flex-grow-1 py-2 text-white text-decoration-none">
+                    <i class="bi bi-cart-plus me-2"></i>¡Lo quiero!
+                  </router-link>
+                  <button class="btn btn-outline-dark flex-grow-1 py-2">
                     <i class="bi bi-heart me-2"></i>Guardar
                   </button>
                 </div>
@@ -142,7 +148,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>  
     </div>
   </div>
   <footer id="footer" class="bg-dark text-white mt-3 py-5">
@@ -184,9 +190,17 @@
 </template>
 
 <script>
+import iconoNav from '/src/assets/ropa-masculina.png';
+import imagenPrincipal from '/src/assets/portada.jpg';
+
 export default {
-  name: 'ProductoDetail'
-}
+  data() {
+    return {
+      iconoNav,
+      imagenPrincipal,}
+    }
+  }
+
 </script>
 
 <style scoped>
@@ -199,6 +213,7 @@ export default {
 
 .product-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .product-image {
@@ -217,11 +232,15 @@ export default {
   transition: all 0.3s ease;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 767.98px) {
   .product-image {
     height: 300px;
   }
-  
+
   .card-body {
     padding: 1.25rem;
   }
